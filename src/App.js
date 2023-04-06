@@ -1,12 +1,17 @@
 import react from "react";
 import  ReactDOM  from "react-dom/client";
+import Header from "./Components/Header";
+import Body from "./Components/Body";
+import Store from "./Utils/Store";
+import { Provider } from "react-redux";
 
 
 const App=()=>{
     return(
-        <>
-            <h1 className="font-bold text-xl">YouTube Clone</h1>
-        </>
+       <Provider store={Store}>
+        <Header />
+        <Body />
+       </Provider>
     )
 }
 
